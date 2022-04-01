@@ -18,8 +18,6 @@ public class Exercicio04 {
 		}
 		else 
 		{
-			
-			
 			System.out.print("O numero é ímpar e o numero "+x+" ao quadrado é "+Math.pow(x, 2));
 		}
 		
