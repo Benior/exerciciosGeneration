@@ -1,5 +1,8 @@
 package Exercicios_04_04;
-
+/*
+ Informar todos os números de 1000 a 1999 que quando divididos por 11
+obtemos resto = 5.
+ */
 public class Exercicio01For {
  
 	public static void main(String[] args) {
