@@ -2,7 +2,7 @@
  * exiba a soma dos valores dela e a soma dos valores da primeira diagonal, ou seja,
  * diagonal principal.
  */
-package Exercicios_05_04;
+package exercicios_05_04;
 
 import java.util.Scanner;
 

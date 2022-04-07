@@ -2,7 +2,7 @@
  * com os lançamentos, escreva esse vetor. A seguir determine e imprima a média aritmética dos
  * lançamentos, contabilize e apresente também quantas foram as ocorrências da maior pontuação.
  */
-package Exercicios_05_04;
+package exercicios_05_04;
 
 import java.text.DecimalFormat;
 import java.util.Random;

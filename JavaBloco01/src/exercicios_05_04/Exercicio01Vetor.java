@@ -2,7 +2,7 @@
 /* Faça um programa que crie um vetor por leitura com 5 valores de pontuação de uma atividade
  * e o escreva em seguida. Encontre após a maior pontuação e a apresente.
  */
-package Exercicios_05_04;
+package exercicios_05_04;
 
 import java.util.Scanner;
 

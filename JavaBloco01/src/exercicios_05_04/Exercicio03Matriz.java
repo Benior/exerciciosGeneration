@@ -4,7 +4,7 @@
  *  b) Uma matriz M2 cujos elementos serão as diferenças dos elementos de mesma posição das
  *  matrizes N1 eN2.
  */
-package Exercicios_05_04;
+package exercicios_05_04;
 
 import java.util.Random;
 

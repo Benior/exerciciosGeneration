@@ -1,4 +1,4 @@
-package Exercicios_04_04;
+package exercicios_04_04;
 /*
  Uma empresa desenvolveu uma pesquisa para saber as características
 psicológicas dos indivíduos de uma região. Para tanto, a cada uma das pessoas

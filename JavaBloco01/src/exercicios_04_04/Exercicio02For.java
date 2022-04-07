@@ -1,4 +1,4 @@
-package Exercicios_04_04;
+package exercicios_04_04;
 /*
  Ler 10 números e imprimir quantos são pares e quantos são ímpares.
  */
