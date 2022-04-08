@@ -33,9 +33,7 @@ public class Fazendinha {
 		System.out.println("\n");
 		pre.statusPreguiça();
 		System.out.println("\n");
-		System.out.println("O "+cac.getNome()+cac.movimento()+"correndo por ai, fazendo "+cac.getSom());
-		System.out.println("O "+cav.getNome()+cac.movimento()+"galopando por ai, fazendo "+cav.getSom());
-		System.out.println("A "+pre.getNome()+cac.movimento()+"na arvore olhando tudo e fazendo "+pre.getSom());
+		
 	}
 
 }

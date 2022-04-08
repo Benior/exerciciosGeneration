@@ -3,8 +3,7 @@ package exercicios_07_04;
 public class Animal {
 	private String nome;
 	private int idade;
-	private String som;
-	
+	private boolean emitirSom; 
 	
 	
 	public String getNome() {
@@ -19,13 +18,29 @@ public class Animal {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	public String getSom() {
-		return som;
+	public boolean getEmitirSom() {
+		return emitirSom;
 	}
-	public void setSom(String som) {
-		this.som = som;
+	public void setEmitirSom(boolean emitirSom) {
+		this.emitirSom = emitirSom;
 	}
 	
+	public void fazerSom()
+	{
+		this.setEmitirSom(true);
+	}
+	public void naoFazerSom()
+	{
+		this.setEmitirSom(false);
+	}
+	
+	public String fazendoSom()
+	{
+		if(this.getEmitirSom()==true)
+			return "O animal faz barulho genérico";
+		else
+			return "O animal não faz barulho generico";
+	}
 	
 
 }

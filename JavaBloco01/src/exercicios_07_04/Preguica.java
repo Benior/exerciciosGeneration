@@ -7,7 +7,7 @@ public class Preguica extends Animal {
 	private int naArvore;
 	private String nome;
 	private int idade;
-	private String som;
+	private int som;
 	private int movimento;
 
 
@@ -30,18 +30,30 @@ public class Preguica extends Animal {
 		System.out.println("Escreva a idade da preguiça: ");
 		idade=ler.nextInt();
 		this.setIdade(idade);
-		System.out.println("Qual o som que a preguiça faz: ");
-		som=ler.next();
-		this.setSom(som);
+		System.out.println("A preguiça está fazendo o som que preguiças fazem, digite 1 se sim ou 2 se não: ");
+		som=ler.nextInt();
+		if(som==1)
+			this.fazerSom();
+		else
+			this.naoFazerSom();
 		System.out.println("A preguiça está na arvore, digite 1 se sim ou 2 se não: ");
 		movimento=ler.nextInt();
 		this.setNaArvore(movimento);
 	}
+	@Override
+	public String fazendoSom()
+	{
+		if(this.getEmitirSom()==true)
+			return "faz o barulho que preguiças fazem";
+		else
+			return "não faz o barulho que preguiças fazem";
+	}
+	
 	public void statusPreguiça()
 	{
 		System.out.println("O nome da preguiça é "+this.getNome());
 		System.out.println(this.getNome()+" tem "+this.getIdade()+" anos");
-		System.out.println(this.getNome()+" faz "+this.getSom());
+		System.out.println(this.getNome()+" "+this.fazendoSom());
 		System.out.println("A "+this.getNome()+this.movimento()+"na arvore");
 	}
 
