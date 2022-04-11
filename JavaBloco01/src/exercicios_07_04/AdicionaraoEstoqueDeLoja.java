@@ -13,6 +13,7 @@ public class AdicionaraoEstoqueDeLoja {
 		int posicao;
 		ArrayList<String> estoque = new ArrayList<>();
 		
+		try {
 		do {
 			System.out.println("Selecione a opção desejada:\nDigite:\n 1-Para Adicionar item ao Estoque.\n 2-para remover item do Estoque.\n 3-Para conferir o estoque.\n 0-para encerrar o sistema.");
 			opcao=ler.nextInt();
@@ -82,6 +83,9 @@ public class AdicionaraoEstoqueDeLoja {
 			}
 			
 		}while(opcao!=0);
-		
+		}catch (InputMismatchException erro)
+		{
+			System.out.println("ERRO: Não coloque espaço ou caracteres no momento em que for solicitado um número!");
+		}
 	}
 }
