@@ -1,8 +1,10 @@
 package exercicios_06_04;
 
 import java.util.Scanner;
+import java.io.IOException;
 
 public class Exercicio6ClasseConta {
+	
 	Scanner ler = new Scanner(System.in);
 	String titular;
 	String tipo;
@@ -37,6 +39,24 @@ public class Exercicio6ClasseConta {
 			
 			if (operacao==1)
 			{
+				    try
+				    {
+				        final String os = System.getProperty("os.name");
+
+				        if (os.contains("Windows"))
+				        {
+				            Runtime.getRuntime().exec("cls");
+				        }
+				        else
+				        {
+				            Runtime.getRuntime().exec("clear");
+				        }
+				    }
+				    catch (final Exception e)
+				    {
+				
+				    }
+								
 				System.out.print("\n\n");
 				this.saldoNaTela();
 				System.out.print("\n\n");
