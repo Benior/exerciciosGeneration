@@ -105,7 +105,7 @@ public class CambistaDoEnem {
 		
 		}catch (InputMismatchException erro)
 		{
-			System.out.println("ERRO: Por favor colocar apenas números inteiros e não usar espaços!");
+			System.out.println("\n\nERRO: Por favor colocar apenas números inteiros e não usar espaços!");
 			opcao=5;
 		}					
 					
