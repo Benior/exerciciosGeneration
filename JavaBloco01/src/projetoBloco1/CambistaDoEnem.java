@@ -82,12 +82,14 @@ public class CambistaDoEnem {
 					}
 				}
 		}
+		
 		else
 		{
-			System.out.println("\n");
+			System.out.println("Opção inválida");
 		}
 		
 		}while (opcao!=0);
+		
 		
 		totalC1=can1.precificar(caneta1,1);
 		totalC2=can2.precificar(caneta2, 1.5, 1.5);
@@ -103,8 +105,9 @@ public class CambistaDoEnem {
 		
 		}catch (InputMismatchException erro)
 		{
-			System.out.println("ERRO: Por favor colocar apenas números inteiros e não digitar espaço ' '!");
-		}				
+			System.out.println("ERRO: Por favor colocar apenas números inteiros e não usar espaços!");
+			opcao=5;
+		}					
 					
 		 System.out.println("Fim do programa");
 	}
