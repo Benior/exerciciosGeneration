@@ -3,13 +3,15 @@ package projetoBloco1;
 import java.util.InputMismatchException;
 
 public class CanetaQuatroCores extends Caneta {
-	private String cor;
+	private String cor; //Atributos próprios em classe filha
 	private String cor1;
 	private String cor2;
 	private String cor3;
 	private String cor4;
 	private int opcao;
 	
+	
+	//Polimorfismo de sobreposição
 	@Override
 	public void fabricarCaneta()
 	{
@@ -66,7 +68,7 @@ public class CanetaQuatroCores extends Caneta {
 		System.out.println("O material da caneta é "+this.getTipoDeTinta());
 	}
 
-	//adicionei os getters & setters da caneta 4 cores para o encapsulamento.
+	//Getters & setters da caneta 4 cores para o encapsulamento.
 	
 	public String getCor1() {
 		return cor1;

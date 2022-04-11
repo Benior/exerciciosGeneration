@@ -4,9 +4,10 @@ import java.util.InputMismatchException;
 
 public class CanetaGel extends Caneta {
 	private boolean cheiro;
-	String cor;
-	int opcao;
+	private String cor;
+	private int opcao;
 	
+	//Atributos e método próprios em classe filha
 	public void comCheiro()
 	{
 		this.setCheiro(true);
@@ -28,6 +29,7 @@ public class CanetaGel extends Caneta {
 	
 		}
 	}
+	//Polimorfismo de sobreposição
 	@Override
 	public void materialCaneta()
 	{
@@ -39,7 +41,7 @@ public class CanetaGel extends Caneta {
 	{
 		this.setModelo("Caneta Gel");
 	}
-	//adicionei no menu da caneta gel a opção de com cheiro e sem cheiro.
+
 	@Override
 	public void fabricarCaneta()
 	{
@@ -71,6 +73,7 @@ public class CanetaGel extends Caneta {
 		
 	}
 	
+	// Getters e setters 
 	public boolean isCheiro() {
 		return cheiro;
 	}

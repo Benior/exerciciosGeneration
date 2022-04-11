@@ -6,7 +6,9 @@ import java.util.*;
  */
 public abstract class Caneta implements LojaDeCanetas  { 
 	Scanner ler = new Scanner(System.in);
-	// atributos da classe mãe que são passados para todas as classes filhas
+	/* atributos da classe mãe que são passados para todas as classes filhas,
+	 * Todos os atributos estão encapsulados e são alterados somente pelos getters e setters.
+	 * */
 	 private int carga=100;
 	 private int opcao;
 	 private double preco;
@@ -17,21 +19,21 @@ public abstract class Caneta implements LojaDeCanetas  {
 	 
 	// A partir daqui temos os métodos
 	 
-	@Override // Método sobrecarga para atribuir preço ao produto
+	 // Método sobrecarga para atribuir preço ao produto
 	public double precificar(double quantidade, double valor)
 	{
 		this.setPreco(quantidade*valor);
 		return this.getPreco();
 							
 	}
-	
+	 // Método sobrecarga para atribuir preço ao produto
 	public double precificar(double quantidade, double valor1, double valor2)
 	{
 		this.setPreco(quantidade*(valor1+valor2));
 		return this.getPreco();			
 	}
 	
-	@Override // Método com o status da caneta.
+	 // Método com o status da caneta.
 	public void statusDaCaneta() {
 		this.modeloCaneta();
 		this.materialCaneta();
@@ -43,8 +45,6 @@ public abstract class Caneta implements LojaDeCanetas  {
 	}
 
 	
-	//Removi o metodo de recarregar a caneta
-		
 	public void materialCaneta(){
 		this.setTipoDeTinta("tipo genérico");
 	}
@@ -79,8 +79,6 @@ public abstract class Caneta implements LojaDeCanetas  {
 	public int getCarga() {
 		return carga;
 	}
-
-	//Removi o quantidade de cor uma vez que a gente já estipulou 4 na caneta 4 cores
 	
 	public double getPonta() {
 		return ponta;

@@ -19,7 +19,7 @@ public class CambistaDoEnem {
 		double totalC1, totalC2, totalC3, totalDaCompra;
 		int unidadesCompradas=0;
 		
-		try {
+		try { //Uso de exception com o try, caso a pessoa coloque um caractere ou numero errado.
 		do {
 		System.out.println("Escolha um modelo de caneta que deseja fabricar:\n 1-Caneta Monocor\n 2-Caneta multcor\n 3-Caneta Gel\n 4-Para ver a sua lista\n Ou digite 0 para sair\n");
 		opcao=ler.nextInt();
@@ -106,7 +106,7 @@ public class CambistaDoEnem {
 			System.out.println("ERRO: Por favor colocar apenas números inteiros e não digitar espaço ' '!");
 		}				
 					
-		 System.out.println("Fim do pedido");
+		 System.out.println("Fim do programa");
 	}
 
 }

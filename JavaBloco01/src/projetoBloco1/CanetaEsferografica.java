@@ -2,7 +2,7 @@ package projetoBloco1;
 
 public class CanetaEsferografica extends Caneta {
 	
-	
+	//Polimorfismo de sobreposição 
 	@Override
 	public void modeloCaneta()
 	{
