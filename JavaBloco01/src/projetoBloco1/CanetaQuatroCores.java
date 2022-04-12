@@ -11,11 +11,11 @@ public class CanetaQuatroCores extends Caneta {
 	private int opcao;
 	
 	
-	//Polimorfismo de sobreposição
+	// Polimorfismo de sobreposição
 	@Override
 	public void fabricarCaneta()
 	{
-		try {
+		
 		System.out.println("Escreva a primeira cor");
 		this.cor=ler.next();
 		this.setCor1(cor);
@@ -40,9 +40,7 @@ public class CanetaQuatroCores extends Caneta {
 		else
 			System.out.println("opção inválida\n");
 		}while(opcao<1||opcao>3);
-			}catch (InputMismatchException erro) {
-				System.out.println("Por favor colocar apenas números inteiros e não digitar espaço ' '!");
-			}
+			
 	}
 	
 	@Override

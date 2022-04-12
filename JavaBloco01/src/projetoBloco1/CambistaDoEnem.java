@@ -7,11 +7,10 @@ import java.util.Scanner;
 
 public class CambistaDoEnem {
 	public static void main(String[] args) {
-		ArrayList<String> cane1 = new ArrayList<>();
-		
-		DecimalFormat df = new DecimalFormat("0.00");
+		ArrayList<String> cane1 = new ArrayList<>(); // inicio do colection
+		DecimalFormat df = new DecimalFormat("0.00"); 
 		Scanner ler = new Scanner(System.in);
-		CanetaEsferografica can1 = new CanetaEsferografica();
+		CanetaEsferografica can1 = new CanetaEsferografica(); //Abertura dos objetos
 		CanetaQuatroCores can2 = new CanetaQuatroCores();
 		CanetaGel can3 = new CanetaGel();
 		int opcao, posicao;
@@ -20,11 +19,11 @@ public class CambistaDoEnem {
 		int unidadesCompradas=0;
 		
 		try { //Uso de exception com o try, caso a pessoa coloque um caractere ou numero errado.
-		do {
+		do { //Menu baseado em laço condicional.
 		System.out.println("Escolha um modelo de caneta que deseja fabricar:\n 1-Caneta Monocor\n 2-Caneta multcor\n 3-Caneta Gel\n 4-Para ver a sua lista\n Ou digite 0 para sair\n");
 		opcao=ler.nextInt();
 		
-		if (opcao==1)
+		if (opcao==1) //Condições
 		{
 			can1.fabricarCaneta();
 			System.out.println("\n");

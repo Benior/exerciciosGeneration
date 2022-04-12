@@ -6,9 +6,6 @@ import java.util.*;
  */
 public abstract class Caneta implements LojaDeCanetas  { 
 	Scanner ler = new Scanner(System.in);
-	/* atributos da classe mãe que são passados para todas as classes filhas,
-	 * Todos os atributos estão encapsulados e são alterados somente pelos getters e setters.
-	 * */
 	 private int carga=100;
 	 private int opcao;
 	 private double preco;
@@ -17,8 +14,7 @@ public abstract class Caneta implements LojaDeCanetas  {
 	 private String tipoDeTinta;
 	 private String modelo;
 	 
-	// A partir daqui temos os métodos
-	 
+	
 	 // Método sobrecarga para atribuir preço ao produto
 	public double precificar(double quantidade, double valor)
 	{
