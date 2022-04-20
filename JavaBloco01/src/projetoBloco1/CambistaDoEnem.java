@@ -109,6 +109,7 @@ public class CambistaDoEnem {
 		}					
 					
 		 System.out.println("Fim do programa");
+		 System.out.println("\n\nTurma 50\n-----------------\nCriadores\n-----------------\n-Benior Cardoso\n-Cíntia Rocha\n-Gabriel Alves\n-Gabriela Oliveira\n-Janaina Tavares\n-Rafael Domingos\n-Sabrina Godoy");
 	}
 
 }
