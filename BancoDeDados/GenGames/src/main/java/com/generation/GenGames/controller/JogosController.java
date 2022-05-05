@@ -2,6 +2,8 @@ package com.generation.GenGames.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,12 +46,12 @@ public class JogosController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Jogos> post (@RequestBody Jogos jogo){
+	public ResponseEntity<Jogos> post (@Valid @RequestBody Jogos jogo){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(jogo));		
 	}
 	
 	@PutMapping
-	public ResponseEntity<Jogos> put (@RequestBody Jogos jogo){
+	public ResponseEntity<Jogos> put (@Valid @RequestBody Jogos jogo){
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(jogo));		
 	}
 	
