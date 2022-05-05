@@ -1,4 +1,4 @@
-package com.generation.farmacia.controller;
+package com.generation.GenGames.controller;
 
 import java.util.List;
 
@@ -17,10 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.generation.farmacia.model.Categoria;
-import com.generation.farmacia.repository.CategoriaRepository;
 
-
+import com.generation.GenGames.model.Categoria;
+import com.generation.GenGames.repository.CategoriaRepository;
 
 @RestController
 @RequestMapping("/categoria")
@@ -41,30 +40,25 @@ public class CategoriaController {
 		
 	}
 	
-	@GetMapping("/categoria/{categoria}")
-	public ResponseEntity<List<Categoria>> GetByName(@PathVariable String categoria){
-		return ResponseEntity.ok(repository.findAllByCategoriaContainingIgnoreCase(categoria));
+	@GetMapping("/formato/{formato}")
+	public ResponseEntity<List<Categoria>> GetByFormato(@PathVariable String formato){
+		return ResponseEntity.ok(repository.findAllByFormatoContainingIgnoreCase(formato));
 		
 	}
 	
 	@PostMapping
-	public ResponseEntity<Categoria> post (@Valid @RequestBody Categoria categoria){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));		
+	public ResponseEntity<Categoria> post (@Valid @RequestBody Categoria formato){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(formato));		
 	}
 	
 	@PutMapping
-	public ResponseEntity<Categoria> put (@Valid @RequestBody Categoria categoria){
-		return ResponseEntity.ok(repository.save(categoria));	
+	public ResponseEntity<Categoria> put (@Valid @RequestBody Categoria formato){
+		return ResponseEntity.ok(repository.save(formato));	
 	}
 	
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
-	
-	/*
-	 * return repository.findById(postagem.getId()).map(resposta -> ResponseEntity.ok().body(repository.save(postagem))).orElse(ResponseEntity.notFound().build());
-
-	 */
 
 }

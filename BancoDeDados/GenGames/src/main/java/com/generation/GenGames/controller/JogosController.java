@@ -1,8 +1,6 @@
-package com.generation.farmacia.controller;
+package com.generation.GenGames.controller;
 
 import java.util.List;
-
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,44 +15,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.generation.farmacia.model.Categoria;
-import com.generation.farmacia.repository.CategoriaRepository;
-
-
+import com.generation.GenGames.model.Jogos;
+import com.generation.GenGames.repository.JogosRepository;
 
 @RestController
-@RequestMapping("/categoria")
+@RequestMapping("/jogos")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class CategoriaController {
+public class JogosController {
 	
 	@Autowired
-	private CategoriaRepository repository;
+	private JogosRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<Categoria>> GetAll(){
+	public ResponseEntity<List<Jogos>> GetAll(){
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Categoria> GetById(@PathVariable long id){
+	public ResponseEntity<Jogos> GetById(@PathVariable long id){
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 		
 	}
 	
-	@GetMapping("/categoria/{categoria}")
-	public ResponseEntity<List<Categoria>> GetByName(@PathVariable String categoria){
-		return ResponseEntity.ok(repository.findAllByCategoriaContainingIgnoreCase(categoria));
+	@GetMapping("/titulo/{titulo}")
+	public ResponseEntity<List<Jogos>> GetByTitulo(@PathVariable String titulo){
+		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 		
 	}
 	
 	@PostMapping
-	public ResponseEntity<Categoria> post (@Valid @RequestBody Categoria categoria){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));		
+	public ResponseEntity<Jogos> post (@RequestBody Jogos jogo){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(jogo));		
 	}
 	
 	@PutMapping
-	public ResponseEntity<Categoria> put (@Valid @RequestBody Categoria categoria){
-		return ResponseEntity.ok(repository.save(categoria));	
+	public ResponseEntity<Jogos> put (@RequestBody Jogos jogo){
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(jogo));		
 	}
 	
 	@DeleteMapping("/{id}")
@@ -62,9 +58,5 @@ public class CategoriaController {
 		repository.deleteById(id);
 	}
 	
-	/*
-	 * return repository.findById(postagem.getId()).map(resposta -> ResponseEntity.ok().body(repository.save(postagem))).orElse(ResponseEntity.notFound().build());
-
-	 */
 
 }
