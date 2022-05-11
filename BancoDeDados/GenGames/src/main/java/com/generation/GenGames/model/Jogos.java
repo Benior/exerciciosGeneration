@@ -42,6 +42,11 @@ public class Jogos {
 		@NumberFormat(pattern = "#.##")
 		private double valor;
 		
+		
+		@ManyToOne
+		@JsonIgnoreProperties("jogos")
+		private Usuario usuario;
+
 		@ManyToOne
 		@JsonIgnoreProperties("jogos")
 		private Categoria categoria;
@@ -100,6 +105,14 @@ public class Jogos {
 
 		public void setValor(double valor) {
 			this.valor = valor;
+		}
+		
+		public Usuario getUsuario() {
+			return usuario;
+		}
+
+		public void setUsuario(Usuario usuario) {
+			this.usuario = usuario;
 		}
 
 		public Categoria getCategoria() {
