@@ -29,7 +29,7 @@ public class UsuarioService {
 			return Optional.of(repository.save(usuario));
 		
 	}
-	
+	// função para atualizar o usuario
 	public Optional<Usuario>alterarUsuario(Usuario usuario){
 		
 		repository.findById(usuario.getId()).isPresent();
