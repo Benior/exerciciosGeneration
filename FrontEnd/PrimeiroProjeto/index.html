@@ -9,55 +9,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benior Blog</title>
     <!--titulo que aparece na guia do navegador-->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <nav class="container" style=" display: flex;
-        justify-content: space-between;
-        align-items: center;">
+        <nav>
             <!--Organiza o código, nav para cabçalho do site-->
-            <div>
-                <h2>Blog Benior</h2>
+            <div class="navContainer">
+                <h2 class="navH2">Blog Benior</h2>
             </div>
             <div>
-                <a href="contatos.html">
-                    <p>Contatos</p>
-                </a>
-                <a href="videos.html">
-                    <p>Vídeos</p>
-                </a>
+                <ul class="navH2" id="menu">
+                    <a href="contatos.html">
+                        <li>Contatos</li>
+                    </a>
+                </ul>
             </div>
         </nav>
     </header>
-    <h1>Bem vinde a estruturação do meu blog</h1>
-    <!--h1 até h6 tamanho de titulos-->
-    <h2>Quem sou eu?</h2>
-    <h4>Olá eu sou o Benior!!</h4>
+    <div class="pageContent mb-50">
+        <h1>Bem vinde a estruturação do meu blog</h1>
+        <!--h1 até h6 tamanho de titulos-->
+        <h2>Quem sou eu?</h2>
+        <div class="container">
+            <div class="text">
+                <h4>Olá eu sou o Benior!!</h4>
+                <p>Apaixonado por conhecimento, tive experiências que me trouxeram muitas habilidades de comunicação e
+                    técnicas, sou formado em Design Gráfico, tenho experiência com criação de materiais digitais e
+                    impressos, como logos, posts para redes, edição de vídeo e criação de animações em 2d. Tenho
+                    conhecimento de estudo em Java, Spring Tools, MySQL, Postgress, TypeScript, neste momento estou
+                    aprendendo o desenvolvimento em Angular, segue meu GitHub para consulta de alguns trabalhos
+                    github.com/Benior. E meu Instagram para consulta de alguns trabalhos como designer
+                    instagram.com/beniord</p>
+            </div>
+            <div>
+                <img class="imgsize" src="assets/img/Gif-Pronto.gif" alt="gif-alto-retrato-em-anime">
+            </div>
+        </div>
+    </div>
 
-    <p>Estou com 28 anos, atualmente eu moro em São Bernardo do Campo, tive várias experiências com atendimento ao
-        público pela
-        vida tanto presencial, trabalhando em bares e restaurantes, e a distância trabalhando em call center, com essas
-        experiências eu desenvolvi uma boa habilidade de comunicação, aprendi muito lidando com pessoas diversas pelo
-        país.</p>
+    <div class="pageContent mb-50">
+        <div class="center">
+            <h1>Vídeos</h1>
+            <!--h1 até h6 tamanho de titulos-->
+            <h4>Alguns vídeos que eu gostaria de compartilhar</h4>
+            <p>deixo com vocês o meu vídeo de apresentação para a Generation Brasil</p>
+        </div>
+        <div class="container">
 
-    <p>Sempre gostei da área da tecnologia e desenvolvi toda a minha linha de estudo na área, fiz cursos na área de
-        hardware e sou formado em design gráfico pela Unip, desde que me formei trabalho em criação de identidade
-        visual, diagramação e materiais impressos, como designer desenvolvi gosto por motion, gosto muito de trabalhar
-        com vídeos e animações, no último ano fiz algumas overlays e emojis para stramers, foram projetos desafiadores e
-        experiências únicas, mas eu não me encontrei na área do design, e sempre foi uma meta estudar programação,
-        busquei cursos, li sobre e estou neste bootcamp para adquirir todo o conhecimento possível, tanto habilidades
-        técnicas quanto habilidades comportamentais, nessas habilidades comportamentais eu vi muito que desenvolvi ao
-        logo da vida trabalhando em equipe, melhorando a minha comunicação e traçando rumos para o meu futuro, mas não
-        tinha idéia da filosofia por trás disso.</p>
+            <iframe width="630" height="400" src="https://www.youtube.com/embed/q_otmKytiK4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
 
-    <p>Esse curso da generation dá uma base sólida para a gente conseguir se desenvolver tanto como pessoa quanto como
-        programador, e uma vez que eu me especializar em Java vou buscar conhecer mais sobre outras linguagens e me
-        especializar nas que me identifique mais, pois eu acredito que conhecimento nunca é demais.</p>
-    <img src="assets/Gif-Pronto.gif" alt="gif-alto-retrato-em-anime" style="object-fit:scale-down;
-    width:200px;
-    height:300px;
-    display: flex;">
+    <footer>
+        <hr>
+        <div class="container">
+            <a href="https://www.instagram.com/beniord" target="_blank"><img
+                    src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+                    target="_blank"></a>
+            <a href="https://github.com/Benior" target="_blank"><img
+                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                    target="_blank"></a>
+            <a href="https://www.linkedin.com/in/beniorcardoso/" target="_blank"><img
+                    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                    target="_blank"></a>
+            <a href="mailto:benior.santos@gmail.com" target="_blank"><img
+                    src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+                    target="_blank"></a>
+        </div>
+
+        <p class="center">
+            Direitos reservads a Benior Cardoso &copy;
+        </p>
+
+    </footer>
 </body>
 
 </html>
