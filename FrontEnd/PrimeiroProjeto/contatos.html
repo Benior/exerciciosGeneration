@@ -1,84 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+    <!--Informações de metadados que não vão
+    aparecer na página, mas são como assinaturas-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
+    <title>Benior Blog</title>
+    <!--titulo que aparece na guia do navegador-->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <nav class="container" style=" display: flex;
-        justify-content: space-between;
-        align-items: center;">
+        <nav>
             <!--Organiza o código, nav para cabçalho do site-->
-            <div>
-                <h2>Blog Benior</h2>
+            <div class="navContainer">
+                <h2 class="navH2">Blog Benior</h2>
             </div>
             <div>
-                <a href="index.html">
-                    <p>Home</p>
-                </a>
-                <a href="videos.html">
-                    <p>Vídeos</p>
-                </a>
+                <ul class="navH2" id="menu">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                </ul>
             </div>
         </nav>
     </header>
-    <h1>Contatos</h1>
+    <div class="pageContent">
+        <div class="center">
+            <h1>Contatos</h1>
 
-    <h3>Entre em contato comigo</h3>
-    <!--h1 até h6 tamanho de titulos-->
-    <div>
-        <form>
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome">
-            <br>
-            <br>
-            <label for="email">E-mail</label><br>
-            <input type="email" id="email">
-            <br>
-            <br>
-            <label for="conteudo">Conteudo:</label><br>
-            <textarea type="text" id="conteudo" cols="60" rows="5"></textarea>
-            <br>
-            <br>
-            <button>Enviar</button>
-            <br>
-            <br>
-        </form>
+            <h3>Entre em contato comigo</h3>
+        </div>
+        <!--h1 até h6 tamanho de titulos-->
+        <div class="container">
+            <div>
+                <form class="form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" onkeyup="validaNome()" name="nome" value="">
+                    <div id="txtNome"></div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" onkeyup="validaEmail()" name="email" value="">
+                    <div id="txtEmail"></div>
+                    <label for="conteudo">Conteudo:</label>
+                    <textarea type="text" id="conteudo" onkeyup="validaConteudo()" cols="60" rows="5"></textarea>
+                    <div id="txtConteudo"></div>
+                    <button onclick="enviar()">Enviar</button>
+                </form>
+            </div>
+            <div class="form">
+                <p>Rua dos Bobos, n°0 - Centro</p>
+                <p>Londrina - PR</p>
+                <p>CEP: 86020-060</p>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.1378608788364!2d-51.17391518443241!3d-23.310756358271767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb44a5cb8fffff%3A0x1600719f9cc06b97!2sArt%20Deco!5e0!3m2!1spt-BR!2sbr!4v1652987449489!5m2!1spt-BR!2sbr"
+                    width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
+            </div>
+        </div>
     </div>
 
-    <h3>Endereço:</h3>
-    <p>Rua dos Bobos, n°0 - Centro</p>
-    <p>Londrina - PR</p>
-    <p>CEP: 86020-060</p>
-
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.1378608788364!2d-51.17391518443241!3d-23.310756358271767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb44a5cb8fffff%3A0x1600719f9cc06b97!2sArt%20Deco!5e0!3m2!1spt-BR!2sbr!4v1652987449489!5m2!1spt-BR!2sbr"
-        width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <br>
-    <br>
-    <div style="position: fixed; display: flex;
-    align-items: center;">
-        <a href="https://www.instagram.com/beniord" target="_blank"><img
-                src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
-                target="_blank"></a>
-        <a href="https://github.com/Benior" target="_blank"><img
-                src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-                target="_blank"></a>
-        <a href="https://www.linkedin.com/in/beniorcardoso/" target="_blank"><img
-                src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-                target="_blank"></a>
-        <a href="mailto:benior.santos@gmail.com" target="_blank"><img
-                src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
-                target="_blank"></a>
-    </div>
-
+    <footer>
+        <hr>
+        <p class="center">
+            Direitos reservads a Benior Cardoso &copy;
+        </p>
+        <div class="container">
+            <a href="https://www.instagram.com/beniord" target="_blank"><img
+                    src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+                    target="_blank"></a>
+            <a href="https://github.com/Benior" target="_blank"><img
+                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                    target="_blank"></a>
+            <a href="https://www.linkedin.com/in/beniorcardoso/" target="_blank"><img
+                    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                    target="_blank"></a>
+            <a href="mailto:benior.santos@gmail.com" target="_blank"><img
+                    src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+                    target="_blank"></a>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
